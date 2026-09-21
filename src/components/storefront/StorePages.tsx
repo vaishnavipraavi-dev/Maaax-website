@@ -76,12 +76,12 @@ function Hero() {
       <img
         src={slide.image}
         alt="MAAAX seasonal fashion collection"
-        className="absolute inset-0 h-full w-full object-cover object-[72%_top] min-[420px]:object-[68%_top] sm:object-[56%_top] lg:object-top"
+        className="absolute inset-x-0 top-0 h-[62%] w-full object-contain object-top sm:inset-0 sm:h-full sm:object-cover sm:object-[56%_top] lg:object-top"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,8,15,0.96)_0%,rgba(4,8,15,0.78)_46%,rgba(4,8,15,0.22)_78%,rgba(4,8,15,0.08)_100%)] sm:bg-[linear-gradient(90deg,rgba(4,8,15,0.9)_0%,rgba(4,8,15,0.72)_42%,rgba(4,8,15,0.28)_72%,rgba(4,8,15,0.12)_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-header via-header/72 to-transparent sm:h-28 sm:from-header/80 sm:via-transparent" />
-      <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-header/60 to-transparent sm:hidden" />
-      <div className="relative mx-auto flex min-h-[calc(100svh-3.75rem)] max-w-[1480px] flex-col justify-end px-4 pb-7 pt-24 sm:min-h-[calc(100svh-4rem)] sm:px-5 sm:pb-14 md:pt-28 lg:px-8">
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,8,15,0.04)_0%,rgba(4,8,15,0.18)_34%,rgba(4,8,15,0.78)_58%,rgba(4,8,15,0.98)_100%)] sm:bg-[linear-gradient(90deg,rgba(4,8,15,0.9)_0%,rgba(4,8,15,0.72)_42%,rgba(4,8,15,0.28)_72%,rgba(4,8,15,0.12)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-header via-header/90 to-transparent sm:h-28 sm:from-header/80 sm:via-transparent" />
+      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-header/40 to-transparent sm:hidden" />
+      <div className="relative mx-auto flex min-h-[calc(100svh-3.75rem)] max-w-[1480px] flex-col justify-end px-4 pb-7 pt-[46svh] sm:min-h-[calc(100svh-4rem)] sm:px-5 sm:pb-14 sm:pt-24 md:pt-28 lg:px-8">
         <div className="max-w-[22rem] sm:max-w-4xl">
           <div className="mb-3 inline-flex w-fit items-center gap-2 border border-gold/50 bg-black/45 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-gold backdrop-blur sm:mb-4 sm:px-4 sm:text-xs">
             New Season Drop
