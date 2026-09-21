@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "@tanstack/react-router";
+import { Link, useNavigate } from "@/lib/router";
 import {
   ArrowRight,
   CheckCircle2,
@@ -1061,3 +1061,4 @@ export function OrderSuccessPage() {
     </section>
   );
 }
+

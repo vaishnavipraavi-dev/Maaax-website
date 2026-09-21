@@ -1,4 +1,4 @@
-import js from "@eslint/js";
+﻿import js from "@eslint/js";
 import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -26,8 +26,7 @@ export default tseslint.config(
           paths: [
             {
               name: "server-only",
-              message:
-                "TanStack Start does not use the Next.js `server-only` package. Rename the module to `*.server.ts` or mark it with `@tanstack/react-start/server-only`.",
+              message: "This app uses a client-side Vite build. Move server-only code out of browser bundles.",
             },
           ],
         },

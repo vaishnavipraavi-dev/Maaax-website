@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/lib/router";
 
 import logo from "@/assets/logo.png";
 
@@ -15,3 +15,4 @@ export function Brand({ compact = false }: { compact?: boolean }) {
     </Link>
   );
 }
+

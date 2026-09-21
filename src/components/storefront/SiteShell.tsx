@@ -1,4 +1,4 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link, usePathname } from "@/lib/router";
 import { Facebook, Instagram, Menu, MessageCircle, Search, ShoppingBag } from "lucide-react";
 import { useState, type ReactNode } from "react";
 
@@ -107,7 +107,7 @@ function SearchOverlay() {
 }
 
 function Header() {
-  const path = useRouterState({ select: (s) => s.location.pathname });
+  const path = usePathname();
   const { cartCount } = useShop();
 
   return (
@@ -242,3 +242,4 @@ export function SiteShell({ children }: { children: ReactNode }) {
     </ShopProvider>
   );
 }
+

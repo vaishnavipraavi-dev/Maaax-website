@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/lib/router";
 import { MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -70,3 +70,4 @@ export function ProductCard({ product }: { product: Product }) {
     </article>
   );
 }
+
