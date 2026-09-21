@@ -72,43 +72,44 @@ function Hero() {
   const slide = heroSlides[0];
 
   return (
-    <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-header text-header-foreground">
+    <section className="relative min-h-[calc(100svh-3.75rem)] overflow-hidden bg-header text-header-foreground sm:min-h-[calc(100svh-4rem)]">
       <img
         src={slide.image}
         alt="MAAAX seasonal fashion collection"
-        className="absolute inset-0 h-full w-full object-cover object-[58%_top] sm:object-[54%_top] lg:object-top"
+        className="absolute inset-0 h-full w-full object-cover object-[72%_top] min-[420px]:object-[68%_top] sm:object-[56%_top] lg:object-top"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,8,15,0.9)_0%,rgba(4,8,15,0.72)_42%,rgba(4,8,15,0.28)_72%,rgba(4,8,15,0.12)_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-header/80 to-transparent" />
-      <div className="relative mx-auto flex min-h-[calc(100svh-4rem)] max-w-[1480px] flex-col justify-end px-4 pb-10 pt-24 sm:px-5 sm:pb-14 md:pt-28 lg:px-8">
-        <div className="max-w-4xl">
-          <div className="mb-4 inline-flex w-fit items-center gap-2 border border-gold/50 bg-black/35 px-3 py-2 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-gold backdrop-blur sm:px-4 sm:text-xs">
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,8,15,0.96)_0%,rgba(4,8,15,0.78)_46%,rgba(4,8,15,0.22)_78%,rgba(4,8,15,0.08)_100%)] sm:bg-[linear-gradient(90deg,rgba(4,8,15,0.9)_0%,rgba(4,8,15,0.72)_42%,rgba(4,8,15,0.28)_72%,rgba(4,8,15,0.12)_100%)]" />
+      <div className="absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-header via-header/72 to-transparent sm:h-28 sm:from-header/80 sm:via-transparent" />
+      <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-header/60 to-transparent sm:hidden" />
+      <div className="relative mx-auto flex min-h-[calc(100svh-3.75rem)] max-w-[1480px] flex-col justify-end px-4 pb-7 pt-24 sm:min-h-[calc(100svh-4rem)] sm:px-5 sm:pb-14 md:pt-28 lg:px-8">
+        <div className="max-w-[22rem] sm:max-w-4xl">
+          <div className="mb-3 inline-flex w-fit items-center gap-2 border border-gold/50 bg-black/45 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-gold backdrop-blur sm:mb-4 sm:px-4 sm:text-xs">
             New Season Drop
           </div>
           <p className="eyebrow text-gold">{slide.eyebrow}</p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-black leading-none tracking-tight drop-shadow-lg sm:text-5xl md:text-6xl xl:text-7xl">
+          <h1 className="mt-3 max-w-3xl text-4xl font-black leading-[0.92] tracking-tight drop-shadow-lg sm:mt-4 sm:text-5xl md:text-6xl xl:text-7xl">
             {slide.title}
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-7 text-white/85 sm:text-lg">
+          <p className="mt-4 max-w-[19rem] text-[0.95rem] leading-6 text-white/90 drop-shadow sm:mt-5 sm:max-w-xl sm:text-lg sm:leading-7">
             Premium everyday fashion with quick branch availability, wholesale value and easy pickup
             across Maharashtra.
           </p>
-          <div className="mt-6 grid max-w-xl grid-cols-3 gap-2 text-xs text-white/85 sm:gap-3 sm:text-sm">
-            <div className="border-l-2 border-gold pl-3">
-              <strong className="block text-xl text-gold sm:text-2xl">9</strong>
+          <div className="mt-5 grid max-w-[20rem] grid-cols-3 gap-2 text-[0.68rem] leading-tight text-white/90 sm:mt-6 sm:max-w-xl sm:gap-3 sm:text-sm">
+            <div className="border-l-2 border-gold bg-black/18 py-1.5 pl-2.5 backdrop-blur-[2px] sm:bg-transparent sm:py-0 sm:pl-3">
+              <strong className="block text-lg leading-none text-gold sm:text-2xl">9</strong>
               Branches
             </div>
-            <div className="border-l-2 border-gold pl-3">
-              <strong className="block text-xl text-gold sm:text-2xl">24+</strong>
+            <div className="border-l-2 border-gold bg-black/18 py-1.5 pl-2.5 backdrop-blur-[2px] sm:bg-transparent sm:py-0 sm:pl-3">
+              <strong className="block text-lg leading-none text-gold sm:text-2xl">24+</strong>
               Styles
             </div>
-            <div className="border-l-2 border-gold pl-3">
-              <strong className="block text-xl text-gold sm:text-2xl">Fast</strong>
+            <div className="border-l-2 border-gold bg-black/18 py-1.5 pl-2.5 backdrop-blur-[2px] sm:bg-transparent sm:py-0 sm:pl-3">
+              <strong className="block text-lg leading-none text-gold sm:text-2xl">Fast</strong>
               Availability Check
             </div>
           </div>
-          <div className="mt-8 grid max-w-md grid-cols-1 gap-3 sm:flex sm:flex-wrap">
-            <Button asChild variant="gold" size="lg" className="w-full sm:w-auto">
+          <div className="mt-6 grid max-w-[20rem] grid-cols-1 gap-2.5 sm:mt-8 sm:max-w-md sm:flex sm:flex-wrap sm:gap-3">
+            <Button asChild variant="gold" size="lg" className="w-full shadow-lg shadow-black/20 sm:w-auto">
               <Link to="/new-arrivals">
                 Shop New Arrivals <ArrowRight />
               </Link>
@@ -117,7 +118,7 @@ function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="w-full border-white bg-white/10 text-white hover:bg-white hover:text-header sm:w-auto"
+              className="w-full border-white/80 bg-black/20 text-white backdrop-blur hover:bg-white hover:text-header sm:w-auto"
             >
               <Link to="/branches">Find a Branch</Link>
             </Button>
@@ -1061,4 +1062,5 @@ export function OrderSuccessPage() {
     </section>
   );
 }
+
 
