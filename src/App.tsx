@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { RouterProvider, usePathname } from "@/lib/router";
 import { AdminPanel } from "@/components/admin/AdminPanel";
 import { SiteShell } from "@/components/storefront/SiteShell";
@@ -14,6 +15,16 @@ import {
   ProductPage,
 } from "@/components/storefront/StorePages";
 import { products } from "@/data/catalog";
+
+function ScrollToTop() {
+  const path = usePathname();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [path]);
+
+  return null;
+}
 
 function NotFoundPage() {
   return (
@@ -83,6 +94,7 @@ function CurrentPage() {
 export function App() {
   return (
     <RouterProvider>
+      <ScrollToTop />
       <SiteShell>
         <CurrentPage />
       </SiteShell>

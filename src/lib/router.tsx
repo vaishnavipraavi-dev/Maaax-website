@@ -1,4 +1,4 @@
-﻿import { forwardRef, createContext, useContext, useEffect, useMemo, useState, type AnchorHTMLAttributes, type MouseEvent, type ReactNode } from "react";
+import { forwardRef, createContext, useContext, useEffect, useMemo, useState, type AnchorHTMLAttributes, type MouseEvent, type ReactNode } from "react";
 
 type SearchValue = string | number | boolean | null | undefined;
 type NavigateOptions = { to: string; search?: Record<string, SearchValue> };
@@ -41,7 +41,7 @@ export function RouterProvider({ children }: { children: ReactNode }) {
       navigate: (to: string) => {
         window.history.pushState({}, "", to);
         setLocationKey(`${window.location.pathname}${window.location.search}`);
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo(0, 0);
       },
     }),
     [locationKey],
@@ -91,3 +91,4 @@ export function useNavigate() {
   const { navigate } = useContext(RouterContext);
   return (options: NavigateOptions) => navigate(buildHref(options.to, undefined, options.search));
 }
+
