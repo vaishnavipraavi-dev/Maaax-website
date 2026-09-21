@@ -72,17 +72,24 @@ function Hero() {
   const slide = heroSlides[0];
 
   return (
-    <section className="relative min-h-[calc(100svh-3.75rem)] overflow-hidden bg-header text-header-foreground sm:min-h-[calc(100svh-4rem)]">
+    <section className="relative overflow-hidden bg-header text-header-foreground sm:min-h-[calc(100svh-4rem)]">
+      <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-header-border sm:hidden">
+        <img
+          src={slide.image}
+          alt="MAAAX seasonal fashion collection"
+          className="h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-header/70 to-transparent" />
+      </div>
       <img
         src={slide.image}
         alt="MAAAX seasonal fashion collection"
-        className="absolute inset-x-0 top-0 h-[62%] w-full object-contain object-top sm:inset-0 sm:h-full sm:object-cover sm:object-[56%_top] lg:object-top"
+        className="absolute inset-0 hidden h-full w-full object-cover object-[56%_top] sm:block lg:object-top"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,8,15,0.04)_0%,rgba(4,8,15,0.18)_34%,rgba(4,8,15,0.78)_58%,rgba(4,8,15,0.98)_100%)] sm:bg-[linear-gradient(90deg,rgba(4,8,15,0.9)_0%,rgba(4,8,15,0.72)_42%,rgba(4,8,15,0.28)_72%,rgba(4,8,15,0.12)_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-[58%] bg-gradient-to-t from-header via-header/90 to-transparent sm:h-28 sm:from-header/80 sm:via-transparent" />
-      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-header/40 to-transparent sm:hidden" />
-      <div className="relative mx-auto flex min-h-[calc(100svh-3.75rem)] max-w-[1480px] flex-col justify-end px-4 pb-7 pt-[46svh] sm:min-h-[calc(100svh-4rem)] sm:px-5 sm:pb-14 sm:pt-24 md:pt-28 lg:px-8">
-        <div className="mx-auto w-full max-w-[22rem] sm:mx-0 sm:max-w-4xl">
+      <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(4,8,15,0.9)_0%,rgba(4,8,15,0.72)_42%,rgba(4,8,15,0.28)_72%,rgba(4,8,15,0.12)_100%)] sm:block" />
+      <div className="absolute inset-x-0 bottom-0 hidden h-28 bg-gradient-to-t from-header/80 to-transparent sm:block" />
+      <div className="relative mx-auto flex max-w-[1480px] flex-col justify-end px-6 py-9 sm:min-h-[calc(100svh-4rem)] sm:px-5 sm:pb-14 sm:pt-24 md:pt-28 lg:px-8">
+        <div className="w-full max-w-[24rem] sm:max-w-4xl">
           <div className="mb-3 inline-flex w-fit items-center gap-2 border border-gold/50 bg-black/45 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-gold backdrop-blur sm:mb-4 sm:px-4 sm:text-xs">
             New Season Drop
           </div>
@@ -94,7 +101,7 @@ function Hero() {
             Premium everyday fashion with quick branch availability, wholesale value and easy pickup
             across Maharashtra.
           </p>
-          <div className="mx-auto mt-5 grid w-full max-w-[20rem] grid-cols-3 gap-2 text-[0.68rem] leading-tight text-white/90 sm:mx-0 sm:mt-6 sm:max-w-xl sm:gap-3 sm:text-sm">
+          <div className="mt-6 grid w-full grid-cols-3 gap-3 text-[0.8rem] leading-tight text-white/90 sm:mt-6 sm:max-w-xl sm:gap-3 sm:text-sm">
             <div className="border-l-2 border-gold bg-black/18 py-1.5 pl-2.5 backdrop-blur-[2px] sm:bg-transparent sm:py-0 sm:pl-3">
               <strong className="block text-lg leading-none text-gold sm:text-2xl">9</strong>
               Branches
@@ -108,7 +115,7 @@ function Hero() {
               Availability Check
             </div>
           </div>
-          <div className="mx-auto mt-6 grid w-full max-w-[20rem] grid-cols-1 gap-2.5 sm:mx-0 sm:mt-8 sm:max-w-md sm:flex sm:flex-wrap sm:gap-3">
+          <div className="mt-7 grid w-full grid-cols-1 gap-3 sm:mt-8 sm:max-w-md sm:flex sm:flex-wrap sm:gap-3">
             <Button asChild variant="gold" size="lg" className="w-full shadow-lg shadow-black/20 sm:w-auto">
               <Link to="/new-arrivals">
                 Shop New Arrivals <ArrowRight />
