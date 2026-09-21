@@ -73,11 +73,11 @@ function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-header text-header-foreground sm:min-h-[calc(100svh-4rem)]">
-      <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-header-border sm:hidden">
+      <div className="relative aspect-[4/3] w-full overflow-hidden border-b border-header-border sm:hidden">
         <img
           src={slide.image}
           alt="MAAAX seasonal fashion collection"
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-[58%_top]"
         />
         <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-header/70 to-transparent" />
       </div>
@@ -88,13 +88,13 @@ function Hero() {
       />
       <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(4,8,15,0.9)_0%,rgba(4,8,15,0.72)_42%,rgba(4,8,15,0.28)_72%,rgba(4,8,15,0.12)_100%)] sm:block" />
       <div className="absolute inset-x-0 bottom-0 hidden h-28 bg-gradient-to-t from-header/80 to-transparent sm:block" />
-      <div className="relative mx-auto flex max-w-[1480px] flex-col justify-end px-6 py-9 sm:min-h-[calc(100svh-4rem)] sm:px-5 sm:pb-14 sm:pt-24 md:pt-28 lg:px-8">
-        <div className="w-full max-w-[24rem] sm:max-w-4xl">
+      <div className="relative z-10 -mt-16 mx-auto flex max-w-[1480px] flex-col justify-end px-5 pb-8 pt-20 sm:mt-0 sm:min-h-[calc(100svh-4rem)] sm:px-5 sm:pb-14 sm:pt-24 md:pt-28 lg:px-8">
+        <div className="w-full max-w-[25rem] sm:max-w-4xl">
           <div className="mb-3 inline-flex w-fit items-center gap-2 border border-gold/50 bg-black/45 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-gold backdrop-blur sm:mb-4 sm:px-4 sm:text-xs">
             New Season Drop
           </div>
           <p className="eyebrow text-gold">{slide.eyebrow}</p>
-          <h1 className="mt-3 max-w-3xl text-4xl font-black leading-[0.92] tracking-tight drop-shadow-lg sm:mt-4 sm:text-5xl md:text-6xl xl:text-7xl">
+          <h1 className="mt-3 max-w-3xl text-[2.65rem] font-black leading-[0.92] tracking-tight drop-shadow-lg sm:mt-4 sm:text-5xl md:text-6xl xl:text-7xl">
             {slide.title}
           </h1>
           <p className="mt-4 max-w-[19rem] text-[0.95rem] leading-6 text-white/90 drop-shadow sm:mt-5 sm:max-w-xl sm:text-lg sm:leading-7">
